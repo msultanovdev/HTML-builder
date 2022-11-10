@@ -12,7 +12,7 @@ fs.promises.readdir((dirpath), {
               fileName = path.basename(filePath),
               ext = path.extname(filePath);
               fsPromises.stat(filePath).then(res => {
-                console.log(`${fileName.replace(ext, '')} | ${ext.replace('.', '')} | ${Number(res.size / 1000).toFixed(3)}kb`);
+                console.log(`${fileName.replace(ext, '')} | ${ext.replace('.', '')} | ${Number(res.size / 1024).toFixed(3)}kb`);
               });
         }
     });
